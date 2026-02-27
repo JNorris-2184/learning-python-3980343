@@ -29,5 +29,14 @@ def count_days(year, month, whichday):
             count += 1
     return count
 
+def alt_sol(year, month, whichday):
+    # Your code goes here.
+    weekslist = calendar.monthcalendar(year, month)
+    count = 0
+    for w in weekslist:
+        if w[whichday] != 0:
+            count += 1
+    return count
 
 print(count_days(2026, 2, 0))
+print(alt_sol(2026, 2, 0))
